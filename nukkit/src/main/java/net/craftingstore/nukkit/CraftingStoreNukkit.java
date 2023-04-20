@@ -10,12 +10,15 @@ import net.craftingstore.core.CraftingStore;
 
 public class CraftingStoreNukkit extends PluginBase {
 
+    private Config config;
     private CraftingStore craftingStore;
     private String prefix = TextFormat.GRAY + "[" + TextFormat.RED + "CraftingStore" + TextFormat.GRAY + "] " + TextFormat.WHITE;
 
     @Override
     public void onEnable() {
         this.saveResource("config.yml", false);
+
+        config = new Config(this.getDataFolder() + "/config.yml", Config.YAML);
 
         this.craftingStore = new CraftingStore(new CraftingStoreNukkitImpl(this));
 
@@ -33,7 +36,7 @@ public class CraftingStoreNukkit extends PluginBase {
 
     @Override
     public Config getConfig(){
-        return new Config(this.getDataFolder() + "/config.yml", Config.YAML);
+        return this.config;
     }
 
     public CraftingStore getCraftingStore() {
