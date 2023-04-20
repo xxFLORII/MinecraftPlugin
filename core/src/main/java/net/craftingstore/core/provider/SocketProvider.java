@@ -62,9 +62,6 @@ public class SocketProvider extends CraftingStoreProvider {
             this.client.on(Socket.EVENT_CONNECT_ERROR, (Object... args) -> {
                 craftingStore.getLogger().debug("Socket server connect error event called");
                 this.disconnected();
-                if (!craftingStore.getLogger().isDebugging()) {
-                    return;
-                }
                 for (Object arg : args) {
                     if (arg instanceof Exception) {
                         ((Exception) arg).printStackTrace();
@@ -88,9 +85,6 @@ public class SocketProvider extends CraftingStoreProvider {
             });
             this.client.on(Socket.EVENT_ERROR, (Object... args) -> {
                 craftingStore.getLogger().debug("Socket error event called");
-                if (!craftingStore.getLogger().isDebugging()) {
-                    return;
-                }
                 for (Object arg : args) {
                     if (arg instanceof Exception) {
                         ((Exception) arg).printStackTrace();

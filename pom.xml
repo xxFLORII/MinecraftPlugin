@@ -46,10 +46,7 @@
 
     <modules>
         <module>core</module>
-        <module>bukkit</module>
-        <module>bungee</module>
-        <module>sponge</module>
+        <module>nukkit</module>
         <module>assembly</module>
-        <module>velocity</module>
     </modules>
 </project>

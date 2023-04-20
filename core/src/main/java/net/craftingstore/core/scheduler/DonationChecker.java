@@ -40,11 +40,7 @@ public class DonationChecker implements Runnable {
                 new ExecuteDonationsJob(instance, chunk);
             }
         } catch (CraftingStoreApiException | InterruptedException | ExecutionException e) {
-            if (instance.getLogger().isDebugging()) {
-                e.printStackTrace();
-            } else {
-                instance.getLogger().error("Failed to check for donations. If this issue persists, please contact support at https://craftingstore.net.");
-            }
+            instance.getLogger().error("Failed to check for donations. If this issue persists, please contact support at https://craftingstore.net.");
         }
     }
 }

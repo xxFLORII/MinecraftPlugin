@@ -1,9 +1,8 @@
 package net.craftingstore.core;
 
+import cn.nukkit.utils.MainLogger;
 import net.craftingstore.core.http.CraftingStoreCachedAPI;
 import net.craftingstore.core.exceptions.CraftingStoreApiException;
-import net.craftingstore.core.jobs.ExecuteDonationsJob;
-import net.craftingstore.core.logging.CraftingStoreLogger;
 import net.craftingstore.core.models.api.Root;
 import net.craftingstore.core.models.api.misc.CraftingStoreInformation;
 import net.craftingstore.core.models.api.misc.UpdateInformation;
@@ -12,7 +11,6 @@ import net.craftingstore.core.provider.ProviderSelector;
 import net.craftingstore.core.runner.DonationRunner;
 import net.craftingstore.core.scheduler.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -70,7 +68,7 @@ public class CraftingStore {
         return this.selector;
     }
 
-    public CraftingStoreLogger getLogger() {
+    public MainLogger getLogger() {
         return getImplementation().getLogger();
     }
 

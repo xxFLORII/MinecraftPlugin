@@ -112,23 +112,8 @@
         </dependency>
         <dependency>
             <groupId>net.craftingstore</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.craftingstore</groupId>
-            <artifactId>bungee</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.craftingstore</groupId>
-            <artifactId>sponge</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.craftingstore</groupId>
-            <artifactId>velocity</artifactId>
-            <version>${project.version}</version>
+            <artifactId>nukkit</artifactId>
+            <version>2.9.0-RELEASE</version>
         </dependency>
     </dependencies>
 </project>

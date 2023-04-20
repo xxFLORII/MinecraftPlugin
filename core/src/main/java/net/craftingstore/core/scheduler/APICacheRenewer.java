@@ -29,11 +29,7 @@ public class APICacheRenewer implements Runnable {
             api.refreshPaymentsCache();
             api.refreshTopDonatorsCache();
         } catch (CraftingStoreApiException | ExecutionException | InterruptedException e) {
-            if (this.instance.getLogger().isDebugging()) {
-                e.printStackTrace();
-            } else {
-                instance.getLogger().error("Failed to renew API cache. If this issue persists, please contact support at https://craftingstore.net.");
-            }
+            instance.getLogger().error("Failed to renew API cache. If this issue persists, please contact support at https://craftingstore.net.");
         }
     }
 }
